@@ -1,5 +1,16 @@
 import http.client
 
+def import_matrix(path):
+    lines = import_strs(path)
+
+    matrix = {}
+    for row_idx, line in enumerate(lines):
+        for col_idx, char in enumerate(line):
+            matrix[(row_idx, col_idx)] = int(char)
+
+    return matrix
+
+
 def import_strs(path):
     with open(path) as f:
         lines = f.readlines()
