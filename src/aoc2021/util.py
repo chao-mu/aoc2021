@@ -6,7 +6,7 @@ def import_matrix(path):
     matrix = {}
     for row_idx, line in enumerate(lines):
         for col_idx, char in enumerate(line):
-            matrix[(row_idx, col_idx)] = int(char)
+            matrix[(col_idx, row_idx)] = int(char)
 
     return matrix
 
